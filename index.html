@@ -1,61 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<link rel="shortcut icon" href="./finder.ico">
-<meta charset="UTF-8"/>
-
-<title>黑客代码雨</title>
-<link rel="shortcut icon" href="./finder.ico">
-<style type="text/css">
-/*basic reset*/
-*{margin:0;padding:0;}
-body{background:black;}
-canvas{display:block;}
-</style>
-
+    <link rel="shortcut icon" href="./finder.ico">
+    <meta charset="UTF-8">
+    <title>ZDYの小站</title>
+    
+    <style type="text/css">
+    body{background-image:url("https://b.zhutix.com/bizhi/kimi/12.jpg");background-repeat:no-repeat fixed}
+    </style>
+    <a href="http://zdybootsystem.freeee.ml/shizhong.html">
+        <button class="btn"><span>罗盘时钟</span></button>
+    </a>
+    <a href="http://zdybootsystem.freeee.ml/daimayu.html">
+    <button class="btn"><span>黑客代码雨</span></button>
+    </a>
+    </a>
+    <a href="http://zdybootsystem.freeee.ml/xiangce.html">
+    <button class="btn"><span>3D旋转相册</span></button>
+    <a href="http://zdybootsystem.freeee.ml/star.html">
+        <button class="btn"><span>炫彩圆圈</span></button>
+    </a>
+    <a href="http://zdybootsystem.freeee.ml/aixin.htm">
+        <button class="btn"><span>爱心特效</span></button>
+    </a>
 </head>
 <body>
-
-<canvas id="c"></canvas>
-
-<script type="text/javascript">
-var c=document.getElementById("c");
-var ctx= c.getContext("2d");
-
-c.height=window.innerHeight;
-c.width=window.innerWidth;
-
-var chinese="010110";
-chinese=chinese.split("");
-
-var font_size=10;
-var columns=c.width/font_size;
-var drops=[];
-
-for(var x=0;x<columns;x++)
-	drops[x]=1;
-
-function draw(){
-	ctx.fillStyle="rgba(0,0,0,0.05)";
-	ctx.fillRect(0,0,c.width,c.height);
-
-	ctx.fillStyle="#0F0";
-	ctx.font=font_size+"px arial";
-
-	for(var i=0;i<drops.length;i++){
-	var text=chinese[Math.floor
-(Math.random()*chinese.length)];
-
-ctx.fillText(text,i*font_size,drops[i]*font_size);
-
-if(drops[i]*font_size>c.height&&Math.random()>0.975)
-	drops[i]=0;
-	drops[i]++;
-	}
-}
-
-setInterval(draw,50);
-</script>
 
 </body>
 </html>
